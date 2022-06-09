@@ -10,7 +10,7 @@ do
     esac
 done
 
-languages=("flutter" "nodejs")
+languages=("flutter" "nodejs" "react" "vue")
 exists=0
 
 for str in ${languages[@]}; do
@@ -30,6 +30,14 @@ echo "Generating new $language project named $name"
 
 if [ "$language" == "flutter" ]; then
     flutter create --org zw.co.iamgoni $name
+fi
+
+if [ "$language" == "react" ]; then
+    yarn create vite $name --template react
+fi
+
+if [ "$language" == "vue" ]; then
+    yarn create vite $name --template vue
 fi
 
 if [ "$language" == "nodejs" ]; then
