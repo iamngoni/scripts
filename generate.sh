@@ -1,6 +1,6 @@
 #! /bin/sh
-echo "Changing directory to projects"
-cd /home/iamngoni/projects/
+echo "$PWD"
+cd $PWD
 
 while getopts l:n: flag
 do
@@ -45,7 +45,7 @@ if [ "$language" == "nodejs" ]; then
     cd ..
 fi
 
-cd /home/iamngoni/projects/$name
+cd $PWD/$name
 echo "Generating git project"
 git init .
 git add .
