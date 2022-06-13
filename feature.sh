@@ -17,24 +17,29 @@ cd $name
 # Create Data folder
 mkdir -v data
 cd data
-mkdir -v datasources
-mkdir -v models
-mkdir -v repositories
+mkdir repositories
+mkdir dtos
+mkdir datasources
 cd ..
 
 # Create Domain Folder
 mkdir -v domain
 cd domain
-mkdir -v entities
-mkdir -v repositories
-mkdir -v usecases
+mkdir models
 cd ..
 
 # Create Presentation Folder
 mkdir -v presentation
 cd presentation
-mkdir -v providers
-mkdir -v pages
-mkdir -v widgets
+mkdir widgets
+mkdir providers
+mkdir controllers
+cd ..
+
+# Create Application Folder
+mkdir -v application
+cd application
+mkdir services
+
 
 echo "Feature $name setup!"
