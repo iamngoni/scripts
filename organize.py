@@ -31,7 +31,7 @@ formats = {
     }
 }
 
-downloads_path = "/home/iamngoni/Downloads"
+downloads_path = "~/Downloads"
 
 
 def ext(file_name: str):
